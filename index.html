@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body class="text-(--text) font-(--font-sans)">
+<body class="bg-linear-[180deg,_#807ECE_0%,_#807ECE_100%] min-h-screen text-(--text) font-(--font-sans)">
     <div id="root"></div>
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -166,7 +166,7 @@
                             <Button className="w-16 h-16">8</Button>
                             <Button className="w-16 h-16">9</Button>
                             <Button className="w-16 h-16" variant="primary">
-                                *
+                                x
                             </Button>
                         </div>
                         <div className="flex gap-3">
@@ -199,7 +199,7 @@
 
         function OperationHistory() {
             return (
-                <Card className="py-10 px-8">
+                <Card className="w-full py-10 px-8">
                     <Text
                         as="h1"
                         variant="heading"
@@ -220,7 +220,12 @@
 
         function App() {
             return (
-                <main className="py-28 px-4">
+                <main className={`
+                    py-28 px-4 sm:px-10
+                    flex flex-col sm:flex-row
+                    items-center sm:items-stretch
+                    gap-5
+                `}>
                     <Calculator />
                     <OperationHistory />
                 </main>
