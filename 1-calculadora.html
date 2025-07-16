@@ -161,6 +161,11 @@
                 })
             }
 
+            React.useEffect(() => {
+                const savedHistory = localStorage.getItem(historyStorageKey, JSON.stringify(history))
+                setHistory(JSON.parse(savedHistory || '[]'))
+            }, [])
+
             return (
                 <CalculatorContext.Provider
                     value={{ history, updateHistory }}
